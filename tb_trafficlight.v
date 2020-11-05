@@ -1,5 +1,5 @@
 //testbench for traffic light controller
-`timescale 10 ns/ 1 ps
+//`timescale 10 ns/ 1 ps
 
 `define DELAY 1
 
@@ -60,11 +60,11 @@ endtask
 task operation_flow;
  begin
  sensor = 0;
- # 600
+ # 60
  sensor = 1;
- # 1200
+ # 120
  sensor = 0;
- # 1200
+ # 120
  sensor = 1;
  end
 endtask
@@ -72,7 +72,7 @@ endtask
 task debug_output;
  begin
  $display("----------------------------------------------");
-        $display("------------------     -----------------------");
+ $display("------------------     -----------------------");
  $display("----------- SIMULATION RESULT ----------------");
  $display("--------------             -------------------");
  $display("----------------         ---------------------");
